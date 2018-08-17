@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.synnapps.carouselview.CarouselView;
 import com.synnapps.carouselview.ImageClickListener;
 import com.synnapps.carouselview.ImageListener;
+import com.synnapps.carouselview.ViewListener;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -33,7 +34,7 @@ public class homeFragment extends Fragment{
     ArrayList<Integer> alImage;
 
 
-    int[] sampleImages = {R.drawable.ic_notifications_black_24dp, R.drawable.ic_settings_black_24dp, R.drawable.ic_home_black_24dp};
+    int[] sampleImages = {R.drawable.home_banner1, R.drawable.home_banner2, R.drawable.home_banner3};
 
     public homeFragment() {
         // Required empty public constructor
