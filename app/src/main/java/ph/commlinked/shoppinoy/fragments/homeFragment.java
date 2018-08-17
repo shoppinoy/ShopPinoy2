@@ -54,7 +54,6 @@ public class homeFragment extends Fragment{
         //return inflater.inflate(R.layout.fragment_home, container, false);
         carouselView = (CarouselView)view.findViewById(R.id.carouselView);
         carouselView.setPageCount(sampleImages.length);
-
         carouselView.setImageListener(imageListener);
 
         carouselView.setImageClickListener(new ImageClickListener() {
@@ -65,7 +64,7 @@ public class homeFragment extends Fragment{
         });
 
 
-        alName = new ArrayList<>(Arrays.asList("Cheesy...", "Crispy... ", "Fizzy...", "Cool...", "Softy...", "Fruity...", "Fresh...", "Sticky..."));
+        alName = new ArrayList<>(Arrays.asList("Cheesy", "Crispy", "Fizzy", "Cool", "Softy...", "Fruity...", "Fresh...", "Sticky..."));
         alImage = new ArrayList<>(Arrays.asList(R.drawable.ic_home_black_24dp, R.drawable.ic_notifications_active_black_24dp, R.drawable.ic_chat_black_24dp, R.drawable.ic_account_circle_black_24dp, R.drawable.ic_settings_black_24dp, R.drawable.ic_home_black_24dp, R.drawable.ic_notifications_active_black_24dp, R.drawable.ic_chat_black_24dp));
 
         // Calling the RecyclerView

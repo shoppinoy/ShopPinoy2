@@ -1,5 +1,6 @@
 package ph.commlinked.shoppinoy.Activity;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -8,6 +9,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,11 +27,11 @@ public class MainActivity extends AppCompatActivity {
     private TabLayout tabLayout;
     private ViewPager viewPager;
     private int[] tabIcons = {
-            R.drawable.ic_home_black_24dp,
-            R.drawable.ic_notifications_black_24dp,
-            R.drawable.ic_chat_black_24dp,
-            R.drawable.ic_account_circle_black_24dp,
-            R.drawable.ic_settings_black_24dp
+            R.drawable.ic_action_home,
+            R.drawable.ic_action_notif,
+            R.drawable.ic_action_message,
+            R.drawable.ic_action_myaccount,
+            R.drawable.ic_action_settings
     };
 
     @Override
@@ -48,6 +50,27 @@ public class MainActivity extends AppCompatActivity {
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
         setupTabIcons();
+
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            public void onPageScrollStateChanged(int state) {}
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {}
+
+            public void onPageSelected(int position) {
+                if (position == 0){
+                    Toast.makeText(getApplicationContext(), ""+position,Toast.LENGTH_SHORT).show();
+                }else if(position == 1){
+                    Toast.makeText(getApplicationContext(), ""+position,Toast.LENGTH_SHORT).show();
+                }else if(position == 2){
+                    Toast.makeText(getApplicationContext(), ""+position,Toast.LENGTH_SHORT).show();
+                }else if(position == 3){
+                    Toast.makeText(getApplicationContext(), ""+position,Toast.LENGTH_SHORT).show();
+                }else if(position == 4){
+                    Toast.makeText(getApplicationContext(), ""+position,Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getApplicationContext(), loginActivity.class);
+                    startActivity(intent);
+                }
+            }
+        });
     }
 
     private void setupTabIcons() {

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:clickable="true"
+    android:orientation="horizontal"
+    android:weightSum="2">
+
+    <com.mancj.materialsearchbar.MaterialSearchBar
+        android:layout_weight="1.7"
+        style="@style/MaterialSearchBarLight"
+        app:mt_speechMode="false"
+        app:mt_hint="Search"
+        app:mt_placeholder="Search"
+        app:mt_maxSuggestionsCount="10"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchBar" />
+
+        <Button
+            android:layout_weight=".3"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:background="@mipmap/ic_launcher"/>
+
+</LinearLayout>
