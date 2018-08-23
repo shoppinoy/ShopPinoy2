@@ -51,26 +51,30 @@
             android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-
+-
 
         <LinearLayout
-            android:padding="10dp"
+            android:padding="5dp"
             android:weightSum="2"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <ImageView
+                android:layout_margin="3px"
                 android:layout_weight="1"
                 android:src="@drawable/prod_1"
+                android:background="@drawable/border_imageview"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:padding="5dp"
                 />
 
             <ImageView
+                android:layout_margin="3px"
                 android:layout_weight="1"
                 android:src="@drawable/prod_2"
+                android:background="@drawable/border_imageview"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:padding="5dp"/>
@@ -85,14 +89,18 @@
             android:layout_height="wrap_content">
 
             <ImageView
+                android:layout_margin="3px"
                 android:layout_weight="1"
                 android:src="@drawable/prod_3"
+                android:background="@drawable/border_imageview"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:padding="5dp"/>
             <ImageView
+                android:layout_margin="3px"
                 android:layout_weight="1"
                 android:src="@drawable/prod_4"
+                android:background="@drawable/border_imageview"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:padding="5dp"/>
@@ -104,20 +112,24 @@
             android:weightSum="2"
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp">
 
             <ImageView
+                android:layout_margin="3px"
                 android:layout_weight="1"
                 android:src="@drawable/prod_5"
+                android:background="@drawable/border_imageview"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:padding="5dp"/>
             <ImageView
+                android:layout_margin="3px"
                 android:layout_weight="1"
                 android:src="@drawable/prod_6"
+                android:background="@drawable/border_imageview"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:layout_marginBottom="50dp"
                 android:padding="5dp"/>
 
         </LinearLayout>
