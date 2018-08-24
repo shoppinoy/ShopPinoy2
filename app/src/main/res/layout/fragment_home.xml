@@ -3,144 +3,392 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content">
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="10dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.homeFragment">
 
-    <LinearLayout
-        android:id="@+id/linearTop"
-        android:orientation="vertical"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:weightSum="3">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        tools:context=".fragments.homeFragment">
 
-        <!-- TODO: Update blank fragment layout -->
-        <com.synnapps.carouselview.CarouselView
-            android:id="@+id/carouselView"
+        <LinearLayout
+            android:id="@+id/linearTop"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:layout_weight="1.5"
-            app:fillColor="#FFFFFFFF"
-            app:pageColor="#00000000"
-            app:radius="6dp"
-            app:slideInterval="5000"
-            app:strokeColor="#FF777777"
-            app:strokeWidth="1dp"
-            app:indicatorVisibility="gone"
-            app:pageTransformer="flow"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="3">
 
-        <ph.commlinked.shoppinoy.classes.CustomTextView
-            android:text="@string/categories"
-            android:padding="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            <!-- TODO: Update blank fragment layout -->
+            <com.synnapps.carouselview.CarouselView
+                android:id="@+id/carouselView"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_weight="1.5"
+                app:fillColor="#FFFFFFFF"
+                app:indicatorVisibility="gone"
+                app:pageColor="#00000000"
+                app:pageTransformer="flow"
+                app:radius="6dp"
+                app:slideInterval="5000"
+                app:strokeColor="#FF777777"
+                app:strokeWidth="1dp" />
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recycler_view"
-            android:layout_width="match_parent"
+            <ph.commlinked.shoppinoy.classes.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/categories" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:padding="10dp" />
+
+            <ph.commlinked.shoppinoy.classes.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/Featured" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:layout_weight=".5"/>
+            android:layout_below="@id/linearTop"
+            android:baselineAligned="false"
+            android:padding="5dp"
+            android:weightSum="2">
 
-        <ph.commlinked.shoppinoy.classes.CustomTextView
-            android:text="@string/Featured"
-            android:padding="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:baselineAligned="false"
-        android:padding="5dp"
-        android:layout_below="@id/linearTop"
-        android:weightSum="2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <LinearLayout
-            android:id="@+id/linearLeft"
-            android:weightSum="3"
-            android:layout_margin="5dp"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_margin="3dp"
+            <LinearLayout
+                android:id="@+id/linearLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:src="@drawable/prod_1"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:padding="5dp"
-                />
+                android:orientation="vertical"
+                android:weightSum="3">
 
-            <ImageView
-                android:layout_margin="3dp"
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/item1"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:padding="2dp"
+                        android:src="@drawable/prod_1" />
+
+                    <ph.commlinked.shoppinoy.classes.CustomTextView
+                        android:id="@+id/prod_1"
+                        android:layout_below="@+id/item1"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxWidth="200dp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:text="Whole Sale Trend Bag aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa "/>
+
+
+                    <ph.commlinked.shoppinoy.classes.CustomTextView
+                        android:id="@+id/price_1"
+                        android:layout_below="@+id/prod_1"
+                        android:paddingLeft="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#d83636"
+                        android:text="3,450,456.00"/>
+
+                    <RatingBar
+                        android:id="@+id/ratingBar"
+                        style="@style/customRatingBar"
+                        android:layout_below="@+id/price_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="5"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/item2"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:padding="2dp"
+                        android:src="@drawable/prod_2" />
+
+                    <ph.commlinked.shoppinoy.classes.CustomTextView
+                        android:id="@+id/prod_2"
+                        android:layout_below="@+id/item2"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="2dp"
+                        android:maxWidth="200dp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:text="Trend Bag"/>
+
+                    <ph.commlinked.shoppinoy.classes.CustomTextView
+                        android:id="@+id/price_2"
+                        android:layout_below="@+id/prod_2"
+                        android:fontFamily=""
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#d83636"
+                        android:text="345.00"/>
+
+                    <RatingBar
+                        android:id="@+id/ratingBar2"
+                        style="@style/customRatingBar"
+                        android:layout_below="@+id/price_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="5"/>
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/item3"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:padding="2dp"
+                        android:src="@drawable/prod_3" />
+
+                    <ph.commlinked.shoppinoy.classes.CustomTextView
+                        android:id="@+id/prod_3"
+                        android:layout_below="@+id/item3"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="2dp"
+                        android:maxWidth="200dp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:text="Trend Bag"/>
+
+                    <ph.commlinked.shoppinoy.classes.CustomTextView
+                        android:id="@+id/price_3"
+                        android:layout_below="@+id/prod_3"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#d83636"
+                        android:text="345.00"/>
+
+                    <RatingBar
+                        android:id="@+id/ratingBar3"
+                        style="@style/customRatingBar"
+                        android:layout_below="@+id/price_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="5"/>
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginBottom="65dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:src="@drawable/prod_3"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:padding="5dp"
-                />
+                android:orientation="vertical"
+                android:weightSum="3">
 
-            <ImageView
-                android:layout_margin="3dp"
-                android:layout_weight="1"
-                android:src="@drawable/prod_5"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:padding="5dp"
-                />
 
+                <LinearLayout
+                    android:id="@+id/linearRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/item4"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:padding="2dp"
+                            android:src="@drawable/prod_4" />
+
+                        <ph.commlinked.shoppinoy.classes.CustomTextView
+                            android:id="@+id/prod_4"
+                            android:layout_below="@+id/item4"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="2dp"
+                            android:maxWidth="200dp"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:text="Trend Bag"/>
+
+                        <ph.commlinked.shoppinoy.classes.CustomTextView
+                            android:id="@+id/price_4"
+                            android:layout_below="@+id/prod_4"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#d83636"
+                            android:text="345.00"/>
+
+                        <RatingBar
+                            android:id="@+id/ratingBar4"
+                            style="@style/customRatingBar"
+                            android:layout_below="@+id/price_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:numStars="5"
+                            android:stepSize="1"
+                            android:rating="5"/>
+
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/item5"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:padding="2dp"
+                            android:src="@drawable/prod_5" />
+
+                        <ph.commlinked.shoppinoy.classes.CustomTextView
+                            android:id="@+id/prod_5"
+                            android:layout_below="@+id/item5"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="2dp"
+                            android:maxWidth="200dp"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:text="Trend Bag"/>
+
+                        <ph.commlinked.shoppinoy.classes.CustomTextView
+                            android:id="@+id/price_5"
+                            android:layout_below="@+id/prod_5"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#d83636"
+                            android:text="345.00"/>
+
+                        <RatingBar
+                            android:id="@+id/ratingBar5"
+                            style="@style/customRatingBar"
+                            android:layout_below="@+id/price_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:numStars="5"
+                            android:stepSize="1"
+                            android:rating="5"/>
+
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/item6"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:padding="2dp"
+                            android:src="@drawable/prod_6" />
+
+                        <ph.commlinked.shoppinoy.classes.CustomTextView
+                            android:id="@+id/prod_6"
+                            android:layout_below="@+id/item6"
+                            android:layout_marginTop="1dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="2dp"
+                            android:maxWidth="200dp"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:text="Trend Bag"/>
+
+                        <ph.commlinked.shoppinoy.classes.CustomTextView
+                            android:id="@+id/price_6"
+                            android:layout_below="@+id/prod_6"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#d83636"
+                            android:text="345.00"/>
+
+                        <RatingBar
+                            android:id="@+id/ratingBar6"
+                            style="@style/customRatingBar"
+                            android:layout_below="@+id/price_6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:numStars="5"
+                            android:stepSize="1"
+                            android:rating="5"/>
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
-            android:weightSum="3"
-            android:layout_weight="1"
-            android:layout_margin="5dp"
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
 
-
-            <ImageView
-                android:layout_margin="3dp"
-                android:layout_weight="1"
-                android:src="@drawable/prod_2"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:padding="5dp"
-                android:contentDescription="@string/sample"
-                />
-
-            <ImageView
-                android:layout_margin="3dp"
-                android:layout_weight="1"
-                android:src="@drawable/prod_4"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:padding="5dp"
-                />
-
-            <ImageView
-                android:layout_margin="3dp"
-                android:layout_weight="1"
-                android:src="@drawable/prod_6"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:padding="5dp"
-                />
-
-        </LinearLayout>
-    </LinearLayout>
-
-
-
-</RelativeLayout>
+    </RelativeLayout>
 </ScrollView>
