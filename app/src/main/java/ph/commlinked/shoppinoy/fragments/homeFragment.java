@@ -65,8 +65,13 @@ public class homeFragment extends Fragment{
         });
 
 
-        alName = new ArrayList<>(Arrays.asList("Art & Antiques", "Books", "Education", "Cool", "Softy...", "Fruity...", "Fresh...", "Sticky..."));
-        alImage = new ArrayList<>(Arrays.asList(R.drawable.category_1, R.drawable.category_2, R.drawable.category_3, R.drawable.category_4, R.drawable.category_5, R.drawable.category_6, R.drawable.category_7, R.drawable.category_8));
+        alName = new ArrayList<>(Arrays.asList("Arts", "Books", "Education", "Cool", "Softy...", "Fruity...", "Fresh...", "Sticky..."));
+        alImage = new ArrayList<>(Arrays.asList(R.drawable.category_1, R.drawable.category_2, R.drawable.category_3
+
+
+
+
+                , R.drawable.category_4, R.drawable.category_5, R.drawable.category_6, R.drawable.category_7, R.drawable.category_8));
 
         // Calling the RecyclerView
         mRecyclerView = (RecyclerView)view.findViewById(R.id.recycler_view);
