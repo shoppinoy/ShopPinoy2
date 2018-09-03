@@ -65,13 +65,15 @@ public class homeFragment extends Fragment{
         });
 
 
-        alName = new ArrayList<>(Arrays.asList("Arts", "Books", "Education", "Cool", "Softy...", "Fruity...", "Fresh...", "Sticky..."));
+        alName = new ArrayList<>(Arrays.asList("Arts", "Books", "Education", "Cool", "Softy", "Fruity", "Fresh", "Sticky"
+                ,"Fruity...", "Fresh...", "Sticky", "Fruity...", "Fresh...", "Sticky", "Fruity...", "Fresh...", "Sticky"
+                ,"Fruity...", "Fresh...", "Sticky", "Fruity..."));
         alImage = new ArrayList<>(Arrays.asList(R.drawable.category_1, R.drawable.category_2, R.drawable.category_3
-
-
-
-
-                , R.drawable.category_4, R.drawable.category_5, R.drawable.category_6, R.drawable.category_7, R.drawable.category_8));
+                , R.drawable.category_4, R.drawable.category_5, R.drawable.category_6, R.drawable.category_7
+                , R.drawable.category_8, R.drawable.category_9 , R.drawable.category_10 , R.drawable.category_11
+                , R.drawable.category_12, R.drawable.category_13, R.drawable.category_14, R.drawable.category_15
+                , R.drawable.category_16, R.drawable.category_17, R.drawable.category_18, R.drawable.category_19
+                , R.drawable.category_20, R.drawable.category_21));
 
         // Calling the RecyclerView
         mRecyclerView = (RecyclerView)view.findViewById(R.id.recycler_view);
