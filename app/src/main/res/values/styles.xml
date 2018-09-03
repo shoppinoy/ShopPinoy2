@@ -39,4 +39,6 @@
         parent="android:style/Widget.Material.RatingBar.Small">
     </style>
 
+
+
 </resources>
